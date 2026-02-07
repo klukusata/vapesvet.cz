@@ -29,6 +29,7 @@
             padding: 10px;
             font-size: 18px;
             font-weight: bold;
+            display: none; /* skryto, dokud JS nevyhodnotí */
         }
         .container {
             max-width: 750px;
@@ -173,7 +174,29 @@ function enterSite() {
 
 <header>Vapeshop Vapesvět</header>
 
-<div class="open-banner">Otevřeno dnes 8:00–18:00</div>
+<!-- Dynamický banner -->
+<div id="openBanner" class="open-banner">Otevřeno dnes 8:00–18:00</div>
+
+<script>
+function checkOpeningHours() {
+    const now = new Date();
+    const day = now.getDay(); // 0=Ne, 1=Po, ..., 6=So
+    const hour = now.getHours();
+
+    const banner = document.getElementById("openBanner");
+
+    const isWeekday = day >= 1 && day <= 5;
+    const isOpenTime = hour >= 8 && hour < 18;
+
+    if (isWeekday && isOpenTime) {
+        banner.style.display = "block";
+    } else {
+        banner.style.display = "none";
+    }
+}
+
+checkOpeningHours();
+</script>
 
 <div class="container">
 
