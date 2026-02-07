@@ -15,18 +15,26 @@
         header {
             background: #2e7d32;
             color: white;
-            padding: 40px;
+            padding: 35px;
             text-align: center;
-            font-size: 42px;
+            font-size: 38px;
             font-weight: bold;
             letter-spacing: 1.5px;
             text-transform: uppercase;
         }
+        .open-banner {
+            background: #1b5e20;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
         .container {
             max-width: 750px;
-            margin: 40px auto;
+            margin: 35px auto;
             background: white;
-            padding: 35px;
+            padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
@@ -46,31 +54,23 @@
         ul {
             margin-top: 10px;
         }
-        .warning {
-            color: #b30000;
-            font-weight: bold;
-            margin-top: 20px;
-            font-size: 20px;
-        }
-        .notice {
-            background: #fff8e1;
-            padding: 15px;
-            border-left: 5px solid #ffb300;
-            margin-bottom: 25px;
-            border-radius: 5px;
-        }
-        .highlight {
+        .divider {
+            height: 2px;
             background: #c8e6c9;
-            padding: 12px;
-            border-radius: 6px;
-            font-weight: bold;
-            margin-top: 15px;
-            font-size: 18px;
+            margin: 30px 0;
+            border-radius: 2px;
         }
         .photo {
             width: 100%;
             border-radius: 12px;
-            margin: 20px 0;
+            margin: 15px 0;
+        }
+        .photo-small {
+            width: 100%;
+            border-radius: 12px;
+            margin: 10px 0 25px 0;
+            max-height: 260px;
+            object-fit: cover;
         }
         .btn-box {
             margin-top: 25px;
@@ -148,6 +148,9 @@
             border-radius: 10px;
             margin-top: 20px;
         }
+        .icon {
+            margin-right: 6px;
+        }
     </style>
 </head>
 
@@ -168,13 +171,13 @@ function enterSite() {
 }
 </script>
 
-<header>
-    Vapeshop Vapesvět
-</header>
+<header>Vapeshop Vapesvět</header>
+
+<div class="open-banner">Otevřeno dnes 8:00–18:00</div>
 
 <div class="container">
 
-    <img src="IMG_1961.jpg" alt="Vchod do prodejny" class="photo">
+    <img src="IMG_1961.jpg" alt="Vchod do prodejny" class="photo-small">
 
     <div class="notice">
         <strong>Ukončení provozu e‑shopu:</strong><br>
@@ -226,11 +229,13 @@ function enterSite() {
 
 </div>
 
+<div class="divider"></div>
+
 <!-- NOVÁ SEKCE CO U NÁS NAJDETE -->
 <div class="container">
     <h2>Co u nás najdete</h2>
 
-    <h3>E‑liquidy</h3>
+    <h3>💨 E‑liquidy</h3>
     <ul>
         <li><strong>OXVA</strong> – čisté a výrazné chutě, vysoká kvalita</li>
         <li><strong>Aramax (Ritchy Group)</strong> – tabákové i ovocné příchutě</li>
@@ -240,10 +245,10 @@ function enterSite() {
         <li><strong>Just Juice</strong> – britské ovocné příchutě</li>
     </ul>
 
-    <h3>Shake & Vape + Boostery</h3>
+    <h3>🧪 Shake & Vape + Boostery</h3>
     <p>Nabízíme Shake & Vape příchutě a nikotinové boostery pro vlastní míchání.</p>
 
-    <h3>Cartridge a příslušenství</h3>
+    <h3>🔌 Cartridge a příslušenství</h3>
 
     <h4>OXVA zařízení</h4>
     <ul>
@@ -273,6 +278,8 @@ function enterSite() {
 
     <p>Rádi poradíme s kompatibilitou a výběrem.</p>
 </div>
+
+<div class="divider"></div>
 
 <!-- JAK NÁS NAJDETE -->
 <div class="container">
