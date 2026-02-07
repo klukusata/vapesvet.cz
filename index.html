@@ -29,7 +29,6 @@
             padding: 10px;
             font-size: 18px;
             font-weight: bold;
-            display: none;
         }
         .container {
             max-width: 750px;
@@ -60,6 +59,11 @@
             background: #c8e6c9;
             margin: 30px 0;
             border-radius: 2px;
+        }
+        .photo {
+            width: 100%;
+            border-radius: 12px;
+            margin: 15px 0;
         }
         .photo-small {
             width: 100%;
@@ -144,6 +148,9 @@
             border-radius: 10px;
             margin-top: 20px;
         }
+        .icon {
+            margin-right: 6px;
+        }
     </style>
 </head>
 
@@ -166,29 +173,7 @@ function enterSite() {
 
 <header>Vapeshop Vapesvět</header>
 
-<!-- Dynamický banner -->
-<div id="openBanner" class="open-banner">Otevřeno dnes 8:00–18:00</div>
-
-<script>
-function checkOpeningHours() {
-    const now = new Date();
-    const day = now.getDay(); // 0=Ne, 1=Po, ..., 6=So
-    const hour = now.getHours();
-
-    const banner = document.getElementById("openBanner");
-
-    const isWeekday = day >= 1 && day <= 5;
-    const isOpenTime = hour >= 8 && hour < 18;
-
-    if (isWeekday && isOpenTime) {
-        banner.style.display = "block";
-    } else {
-        banner.style.display = "none";
-    }
-}
-
-checkOpeningHours();
-</script>
+<div class="open-banner">Otevřeno dnes 8:00–18:00</div>
 
 <div class="container">
 
@@ -246,7 +231,7 @@ checkOpeningHours();
 
 <div class="divider"></div>
 
-<!-- CO U NÁS NAJDETE -->
+<!-- NOVÁ SEKCE CO U NÁS NAJDETE -->
 <div class="container">
     <h2>Co u nás najdete</h2>
 
@@ -281,3 +266,40 @@ checkOpeningHours();
         <li>OXVA CRC</li>
         <li>OXVA SS</li>
         <li>Odpory: 0.6 Ω, 0.8 Ω, 1.2 Ω</li>
+    </ul>
+
+    <h4>Cartridge pro další značky</h4>
+    <ul>
+        <li>Elfbar / Elfa</li>
+        <li>Vaporesso</li>
+        <li>GeekVape</li>
+        <li>Voopoo</li>
+    </ul>
+
+    <p>Rádi poradíme s kompatibilitou a výběrem.</p>
+</div>
+
+<div class="divider"></div>
+
+<!-- JAK NÁS NAJDETE -->
+<div class="container">
+
+    <h2>Jak nás najdete</h2>
+
+    <img src="IMG_1961.jpg" alt="Vchod do prodejny" class="photo">
+
+    <iframe 
+        src="https://www.google.com/maps?q=Komensk%C3%A9ho+n%C3%A1m.+79%2F12%2C+Ivan%C4%8Dice&output=embed"
+        allowfullscreen>
+    </iframe>
+
+</div>
+
+<div class="bottom-bar">
+    <a href="https://maps.google.com/?q=Komenského+nám.+79/12+Ivančice" target="_blank">📍 Navigovat</a>
+    <a href="tel:608100701">📞 Zavolat</a>
+    <a href="mailto:pm3@seznam.cz">✉️ E‑mail</a>
+</div>
+
+</body>
+</html>
