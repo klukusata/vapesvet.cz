@@ -29,6 +29,7 @@
             padding: 10px;
             font-size: 18px;
             font-weight: bold;
+            display: none;
         }
         .container {
             max-width: 750px;
@@ -175,6 +176,27 @@ function enterSite() {
 
 <div class="open-banner">Otevřeno dnes 8:00–18:00</div>
 
+<script>
+function checkOpeningHours() {
+    const now = new Date();
+    const day = now.getDay();
+    const hour = now.getHours();
+
+    const banner = document.querySelector(".open-banner");
+
+    const isWeekday = day >= 1 && day <= 5;
+    const isOpenTime = hour >= 8 && hour < 18;
+
+    if (isWeekday && isOpenTime) {
+        banner.style.display = "block";
+    } else {
+        banner.style.display = "none";
+    }
+}
+
+checkOpeningHours();
+</script>
+
 <div class="container">
 
     <img src="IMG_1961.jpg" alt="Vchod do prodejny" class="photo-small">
@@ -235,7 +257,6 @@ function enterSite() {
 <div class="container">
     <h2>Co u nás najdete</h2>
 
-    <!-- E‑liquidy -->
     <h3>
         <img src="liquid.png" alt="E‑liquidy" style="height:22px; vertical-align:middle; margin-right:6px;">
         E‑liquidy
@@ -249,14 +270,12 @@ function enterSite() {
         <li><strong>Just Juice</strong> – britské ovocné příchutě</li>
     </ul>
 
-    <!-- Shake & Vape -->
     <h3>
         <img src="shake.png" alt="Shake & Vape" style="height:22px; vertical-align:middle; margin-right:6px;">
         Shake & Vape + Boostery
     </h3>
     <p>Nabízíme Shake & Vape příchutě a nikotinové boostery pro vlastní míchání.</p>
 
-    <!-- Cartridge -->
     <h3>
         <img src="cartridge.png" alt="Cartridge" style="height:22px; vertical-align:middle; margin-right:6px;">
         Cartridge a příslušenství
