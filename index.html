@@ -56,6 +56,27 @@
             margin-top: 15px;
             font-size: 18px;
         }
+        /* Buttons */
+        .btn-box {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .btn {
+            background: #2e7d32;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .btn:hover {
+            background: #256628;
+        }
         /* Popup */
         #ageModal {
             position: fixed;
@@ -161,6 +182,13 @@ function enterSite() {
     Bez přestávky</p>
 
     <p class="warning">⚠️ PRODEJ POUZE OSOBÁM STARŠÍM 18 LET</p>
+
+    <!-- BUTTONS -->
+    <div class="btn-box">
+        <a class="btn" href="https://maps.google.com/?q=Komenského+nám.+79/12+Ivančice" target="_blank">📍 Navigovat</a>
+        <a class="btn" href="tel:608100701">📞 Zavolat</a>
+        <a class="btn" href="mailto:pm3@seznam.cz">✉️ Napsat e‑mail</a>
+    </div>
 
     <h2>Kde nás najdete</h2>
 
