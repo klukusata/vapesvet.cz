@@ -15,9 +15,10 @@
         header {
             background: #2e7d32;
             color: white;
-            padding: 25px;
+            padding: 35px;
             text-align: center;
-            font-size: 26px;
+            font-size: 36px;
+            font-weight: bold;
             letter-spacing: 1px;
         }
         .container {
@@ -85,6 +86,13 @@
             border-radius: 10px;
             margin-top: 20px;
         }
+        .highlight {
+            background: #c8e6c9;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
     </style>
 </head>
 
@@ -119,23 +127,28 @@ function enterSite() {
 
     <h2>Kontakt</h2>
 
+    <p><strong>E‑mail:</strong><br>
+    pm3@seznam.cz<br>
+    info@vapesvet.cz
+    </p>
+
     <p><strong>Provozovatel:</strong><br>
     Marian Pokorný<br>
-    IČ: 60533528</p>
+    Staropoštovní 96, 69123 Pohořelice<br>
+    <em>(nejde o prodejnu, pouze adresa podnikatele)</em>
+    </p>
 
-    <p><strong>Sídlo podnikatele:</strong><br>
-    Staropoštovní 96<br>
-    69123 Pohořelice</p>
+    <p class="highlight">
+        ✔ Prodejna se nachází v Ivančicích – nikoli v Pohořelicích
+    </p>
 
-    <p><strong>Adresa provozovny:</strong><br>
+    <p><strong>Adresa prodejny:</strong><br>
     Komenského nám. 79/12<br>
-    66491 Ivančice</p>
+    66491 Ivančice
+    </p>
 
     <p><strong>Telefon:</strong><br>
     608 100 701</p>
-
-    <p><strong>E‑mail:</strong><br>
-    info@vapesvet.cz</p>
 
     <p><strong>Otevírací doba:</strong><br>
     Pondělí až pátek 8:00–18:00<br>
@@ -145,7 +158,6 @@ function enterSite() {
 
     <h2>Kde nás najdete</h2>
 
-    <!-- Google mapa – opravená adresa -->
     <iframe 
         src="https://www.google.com/maps?q=Komensk%C3%A9ho+n%C3%A1m.+79%2F12%2C+Ivan%C4%8Dice&output=embed"
         allowfullscreen>
