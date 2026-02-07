@@ -29,7 +29,6 @@
             padding: 10px;
             font-size: 18px;
             font-weight: bold;
-            display: none;
         }
         .container {
             max-width: 750px;
@@ -174,29 +173,7 @@ function enterSite() {
 
 <header>Vapeshop Vapesvět</header>
 
-<!-- Dynamický banner -->
-<div id="openBanner" class="open-banner">Otevřeno dnes 8:00–18:00</div>
-
-<script>
-function checkOpeningHours() {
-    const now = new Date();
-    const day = now.getDay();
-    const hour = now.getHours();
-
-    const banner = document.getElementById("openBanner");
-
-    const isWeekday = day >= 1 && day <= 5;
-    const isOpenTime = hour >= 8 && hour < 18;
-
-    if (isWeekday && isOpenTime) {
-        banner.style.display = "block";
-    } else {
-        banner.style.display = "none";
-    }
-}
-
-checkOpeningHours();
-</script>
+<div class="open-banner">Otevřeno dnes 8:00–18:00</div>
 
 <div class="container">
 
@@ -254,11 +231,11 @@ checkOpeningHours();
 
 <div class="divider"></div>
 
-<!-- CO U NÁS NAJDETE -->
+<!-- NOVÁ SEKCE CO U NÁS NAJDETE -->
 <div class="container">
     <h2>Co u nás najdete</h2>
 
-    <!-- E-liquidy -->
+    <!-- E‑liquidy -->
     <h3>
         <img src="liquid.png" alt="E‑liquidy" style="height:22px; vertical-align:middle; margin-right:6px;">
         E‑liquidy
