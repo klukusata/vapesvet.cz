@@ -56,6 +56,11 @@
             margin-top: 15px;
             font-size: 18px;
         }
+        .photo {
+            width: 100%;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
         /* Buttons */
         .btn-box {
             margin-top: 25px;
@@ -76,6 +81,24 @@
         }
         .btn:hover {
             background: #256628;
+        }
+        /* Fixed bottom bar */
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #2e7d32;
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 0;
+            z-index: 999;
+        }
+        .bottom-bar a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
         }
         /* Popup */
         #ageModal {
@@ -143,6 +166,9 @@ function enterSite() {
 
 <div class="container">
 
+    <!-- PHOTO TOP -->
+    <img src="IMG_1961.jpg" alt="Vchod do prodejny" class="photo">
+
     <div class="notice">
         <strong>Ukončení provozu e‑shopu:</strong><br>
         Provoz internetového obchodu byl ukončen.<br>
@@ -168,11 +194,20 @@ function enterSite() {
         ✔ Prodejna se nachází v Ivančicích – nikoli v Pohořelicích
     </p>
 
-    <p><strong>Adresa prodejny:</strong><br>
+    <h2>Adresa prodejny</h2>
+
+    <p>
     Komenského nám. 79/12<br>
     66491 Ivančice<br>
     <em>Prodejna je v prvním patře a má společný vchod s Komerční bankou a prodejnou elektrokol.</em>
     </p>
+
+    <!-- BUTTONS -->
+    <div class="btn-box">
+        <a class="btn" href="https://maps.google.com/?q=Komenského+nám.+79/12+Ivančice" target="_blank">📍 Navigovat</a>
+        <a class="btn" href="tel:608100701">📞 Zavolat</a>
+        <a class="btn" href="mailto:pm3@seznam.cz">✉️ Napsat e‑mail</a>
+    </div>
 
     <p><strong>Telefon:</strong><br>
     608 100 701</p>
@@ -183,14 +218,10 @@ function enterSite() {
 
     <p class="warning">⚠️ PRODEJ POUZE OSOBÁM STARŠÍM 18 LET</p>
 
-    <!-- BUTTONS -->
-    <div class="btn-box">
-        <a class="btn" href="https://maps.google.com/?q=Komenského+nám.+79/12+Ivančice" target="_blank">📍 Navigovat</a>
-        <a class="btn" href="tel:608100701">📞 Zavolat</a>
-        <a class="btn" href="mailto:pm3@seznam.cz">✉️ Napsat e‑mail</a>
-    </div>
+    <h2>Jak nás najdete</h2>
 
-    <h2>Kde nás najdete</h2>
+    <!-- PHOTO BOTTOM -->
+    <img src="IMG_1961.jpg" alt="Vchod do prodejny" class="photo">
 
     <iframe 
         src="https://www.google.com/maps?q=Komensk%C3%A9ho+n%C3%A1m.+79%2F12%2C+Ivan%C4%8Dice&output=embed"
@@ -199,5 +230,5 @@ function enterSite() {
 
 </div>
 
-</body>
-</html>
+<!-- FIXED BOTTOM BAR -->
+<div class="bottom-bar">
