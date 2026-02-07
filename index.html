@@ -29,7 +29,7 @@
             padding: 10px;
             font-size: 18px;
             font-weight: bold;
-            display: none; /* skryto, dokud JS nevyhodnotí */
+            display: none;
         }
         .container {
             max-width: 750px;
@@ -180,7 +180,7 @@ function enterSite() {
 <script>
 function checkOpeningHours() {
     const now = new Date();
-    const day = now.getDay(); // 0=Ne, 1=Po, ..., 6=So
+    const day = now.getDay();
     const hour = now.getHours();
 
     const banner = document.getElementById("openBanner");
@@ -258,7 +258,11 @@ checkOpeningHours();
 <div class="container">
     <h2>Co u nás najdete</h2>
 
-    <h3>💨 E‑liquidy</h3>
+    <!-- E-liquidy -->
+    <h3>
+        <img src="icons/liquid.png" alt="E‑liquidy" style="height:22px; vertical-align:middle; margin-right:6px;">
+        E‑liquidy
+    </h3>
     <ul>
         <li><strong>OXVA</strong> – čisté a výrazné chutě, vysoká kvalita</li>
         <li><strong>Aramax (Ritchy Group)</strong> – tabákové i ovocné příchutě</li>
@@ -268,10 +272,18 @@ checkOpeningHours();
         <li><strong>Just Juice</strong> – britské ovocné příchutě</li>
     </ul>
 
-    <h3>🧪 Shake & Vape + Boostery</h3>
+    <!-- Shake & Vape -->
+    <h3>
+        <img src="icons/shake.png" alt="Shake & Vape" style="height:22px; vertical-align:middle; margin-right:6px;">
+        Shake & Vape + Boostery
+    </h3>
     <p>Nabízíme Shake & Vape příchutě a nikotinové boostery pro vlastní míchání.</p>
 
-    <h3>🔌 Cartridge a příslušenství</h3>
+    <!-- Cartridge -->
+    <h3>
+        <img src="icons/cartridge.png" alt="Cartridge" style="height:22px; vertical-align:middle; margin-right:6px;">
+        Cartridge a příslušenství
+    </h3>
 
     <h4>OXVA zařízení</h4>
     <ul>
