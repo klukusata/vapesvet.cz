@@ -152,6 +152,20 @@
         .icon {
             margin-right: 6px;
         }
+
+        /* --- NOVÉ STYLY PRO GALERII --- */
+        .location-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .location-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
     </style>
 </head>
 
@@ -324,6 +338,21 @@ checkOpeningHours();
         allowfullscreen>
     </iframe>
 
+</div>
+
+<div class="divider"></div>
+
+<!-- NOVÁ SEKCE NAJDETE NÁS -->
+<div class="container">
+    <h2>Najdete nás</h2>
+
+    <div class="location-gallery">
+        <img src="24 schodu.jpg" alt="Přístup – 24 schodů">
+        <img src="14 kroků.jpg" alt="Přístup – 14 kroků">
+        <img src="IMG_2008.jpeg" alt="Provozovna – vstup">
+        <img src="IMG_2017.jpeg" alt="Provozovna">
+        <img src="IMG_2018.jpeg" alt="Provozovna detail">
+    </div>
 </div>
 
 <div class="bottom-bar">
