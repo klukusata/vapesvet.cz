@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vapeshop Vapesvět</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,6 +14,7 @@
             background: #e8f5e9;
             color: #1b1b1b;
         }
+
         header {
             background: #2e7d32;
             color: white;
@@ -22,6 +25,7 @@
             letter-spacing: 1.5px;
             text-transform: uppercase;
         }
+
         .open-banner {
             background: #1b5e20;
             color: white;
@@ -31,6 +35,7 @@
             font-weight: bold;
             display: none;
         }
+
         .container {
             max-width: 750px;
             margin: 35px auto;
@@ -39,46 +44,53 @@
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
+
         h2 {
             color: #2e7d32;
             border-left: 5px solid #2e7d32;
             padding-left: 10px;
         }
+
         h3 {
             margin-top: 25px;
             color: #1b1b1b;
         }
+
         h4 {
             margin-top: 15px;
             color: #333;
         }
+
         ul {
             margin-top: 10px;
         }
+
         .divider {
             height: 2px;
             background: #c8e6c9;
             margin: 30px 0;
             border-radius: 2px;
         }
-        .photo {
+
+        .photo,
+        .photo-small {
             width: 100%;
             border-radius: 12px;
             margin: 15px 0;
         }
+
         .photo-small {
-            width: 100%;
-            border-radius: 12px;
-            margin: 10px 0 25px 0;
             max-height: 260px;
             object-fit: cover;
         }
+
         .btn-box {
             margin-top: 25px;
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
+
         .btn {
             background: #2e7d32;
             color: white;
@@ -90,9 +102,11 @@
             font-weight: bold;
             transition: 0.2s;
         }
+
         .btn:hover {
             background: #256628;
         }
+
         .bottom-bar {
             position: fixed;
             bottom: 0;
@@ -104,12 +118,15 @@
             padding: 12px 0;
             z-index: 999;
         }
+
         .bottom-bar a {
             color: white;
             font-size: 18px;
             text-decoration: none;
             font-weight: bold;
         }
+
+        /* 18+ popup */
         #ageModal {
             position: fixed;
             top: 0; left: 0;
@@ -120,6 +137,7 @@
             align-items: center;
             z-index: 9999;
         }
+
         #ageBox {
             background: white;
             padding: 35px;
@@ -128,6 +146,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
+
         #ageBox button {
             padding: 12px 25px;
             margin-top: 20px;
@@ -139,9 +158,11 @@
             border-radius: 6px;
             transition: 0.2s;
         }
+
         #ageBox button:hover {
             background: #256628;
         }
+
         iframe {
             width: 100%;
             height: 320px;
@@ -149,20 +170,17 @@
             border-radius: 10px;
             margin-top: 20px;
         }
-        .icon {
-            margin-right: 6px;
-        }
 
-        /* --- NOVÉ STYLY PRO GALERII --- */
+        /* Galerie */
         .location-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 15px;
             margin-top: 20px;
         }
+
         .location-gallery img {
             width: 100%;
-            height: auto;
             border-radius: 10px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.15);
         }
@@ -201,11 +219,7 @@ function checkOpeningHours() {
     const isWeekday = day >= 1 && day <= 5;
     const isOpenTime = hour >= 8 && hour < 18;
 
-    if (isWeekday && isOpenTime) {
-        banner.style.display = "block";
-    } else {
-        banner.style.display = "none";
-    }
+    banner.style.display = (isWeekday && isOpenTime) ? "block" : "none";
 }
 
 checkOpeningHours();
@@ -224,16 +238,16 @@ checkOpeningHours();
     <h2>Kontakt</h2>
 
     <p><strong>E‑mail:</strong><br>
-    pm3@seznam.cz<br>
-    info@vapesvet.cz
+        pm3@seznam.cz<br>
+        info@vapesvet.cz
     </p>
 
     <p><strong>Provozovatel:</strong><br>
-    Marian Pokorný<br>
-    IČ: 60533528<br>
-    DIČ: CZ7506273885<br>
-    Staropoštovní 96, 69123 Pohořelice<br>
-    <em>(nejde o prodejnu, pouze adresa podnikatele)</em>
+        Marian Pokorný<br>
+        IČ: 60533528<br>
+        DIČ: CZ7506273885<br>
+        Staropoštovní 96, 69123 Pohořelice<br>
+        <em>(nejde o prodejnu, pouze adresa podnikatele)</em>
     </p>
 
     <p class="highlight">
@@ -243,9 +257,9 @@ checkOpeningHours();
     <h2>Adresa prodejny</h2>
 
     <p>
-    Komenského nám. 79/12<br>
-    66491 Ivančice<br>
-    <em>Prodejna je v prvním patře a má společný vchod s Komerční bankou a prodejnou elektrokol.</em>
+        Komenského nám. 79/12<br>
+        66491 Ivančice<br>
+        <em>Prodejna je v prvním patře a má společný vchod s Komerční bankou a prodejnou elektrokol.</em>
     </p>
 
     <div class="btn-box">
@@ -254,12 +268,12 @@ checkOpeningHours();
         <a class="btn" href="mailto:pm3@seznam.cz">✉️ Napsat e‑mail</a>
     </div>
 
-    <p><strong>Telefon:</strong><br>
-    608 100 701</p>
+    <p><strong>Telefon:</strong><br>608 100 701</p>
 
     <p><strong>Otevírací doba:</strong><br>
-    Pondělí až pátek 8:00–18:00<br>
-    Bez přestávky</p>
+        Pondělí až pátek 8:00–18:00<br>
+        Bez přestávky
+    </p>
 
     <p class="warning">⚠️ PRODEJ POUZE OSOBÁM STARŠÍM 18 LET</p>
 
@@ -267,33 +281,24 @@ checkOpeningHours();
 
 <div class="divider"></div>
 
-<!-- NOVÁ SEKCE CO U NÁS NAJDETE -->
+<!-- CO U NÁS NAJDETE -->
 <div class="container">
     <h2>Co u nás najdete</h2>
 
-    <h3>
-        <img src="liquid.png" alt="E‑liquidy" style="height:22px; vertical-align:middle; margin-right:6px;">
-        E‑liquidy
-    </h3>
+    <h3><img src="liquid.png" alt="E‑liquidy" style="height:22px; vertical-align:middle; margin-right:6px;">E‑liquidy</h3>
     <ul>
-        <li><strong>OXVA</strong> – čisté a výrazné chutě, vysoká kvalita</li>
+        <li><strong>OXVA</strong> – čisté a výrazné chutě</li>
         <li><strong>Aramax (Ritchy Group)</strong> – tabákové i ovocné příchutě</li>
         <li><strong>Ritchy / Liqua</strong> – široká nabídka chutí</li>
-        <li><strong>Elfliq (Elfbar)</strong> – intenzivní příchutě z jednorázových e‑cigaret</li>
-        <li><strong>Nasty Juice</strong> – výrazné prémiové ovocné mixy</li>
+        <li><strong>Elfliq (Elfbar)</strong> – intenzivní příchutě</li>
+        <li><strong>Nasty Juice</strong> – prémiové ovocné mixy</li>
         <li><strong>Just Juice</strong> – britské ovocné příchutě</li>
     </ul>
 
-    <h3>
-        <img src="shake.png" alt="Shake & Vape" style="height:22px; vertical-align:middle; margin-right:6px;">
-        Shake & Vape + Boostery
-    </h3>
-    <p>Nabízíme Shake & Vape příchutě a nikotinové boostery pro vlastní míchání.</p>
+    <h3><img src="shake.png" alt="Shake & Vape" style="height:22px; vertical-align:middle; margin-right:6px;">Shake & Vape + Boostery</h3>
+    <p>Nabízíme Shake & Vape příchutě a nikotinové boostery.</p>
 
-    <h3>
-        <img src="cartridge.png" alt="Cartridge" style="height:22px; vertical-align:middle; margin-right:6px;">
-        Cartridge a příslušenství
-    </h3>
+    <h3><img src="cartridge.png" alt="Cartridge" style="height:22px; vertical-align:middle; margin-right:6px;">Cartridge a příslušenství</h3>
 
     <h4>OXVA zařízení</h4>
     <ul>
@@ -328,7 +333,6 @@ checkOpeningHours();
 
 <!-- JAK NÁS NAJDETE -->
 <div class="container">
-
     <h2>Jak nás najdete</h2>
 
     <img src="IMG_1961.jpg" alt="Vchod do prodejny" class="photo">
@@ -337,12 +341,11 @@ checkOpeningHours();
         src="https://www.google.com/maps?q=Komensk%C3%A9ho+n%C3%A1m.+79%2F12%2C+Ivan%C4%8Dice&output=embed"
         allowfullscreen>
     </iframe>
-
 </div>
 
 <div class="divider"></div>
 
-<!-- NOVÁ SEKCE NAJDETE NÁS -->
+<!-- NAJDETE NÁS -->
 <div class="container">
     <h2>Najdete nás</h2>
 
