@@ -204,7 +204,7 @@
             top: 0; left: 0;
             width: 100%; height: 100%;
             background: rgba(0,0,0,0.9);
-            display: none; /* <<< DŮLEŽITÉ – defaultně skryté */
+            display: none;
             justify-content: center;
             align-items: center;
             z-index: 9999;
@@ -270,8 +270,154 @@
 
         .location-gallery img {
             width: 100%;
+            max-width: 420px;
+            margin: 0 auto;
+            display: block;
             border-radius: 14px;
             box-shadow: 0 4px 18px rgba(0,0,0,0.8);
+            object-fit: cover;
         }
 
-        /* RESPONS
+        /* ====== RESPONSIVE ====== */
+        @media (max-width: 600px) {
+            .urban-title {
+                font-size: 34px;
+                letter-spacing: 1.5px;
+            }
+            .container {
+                margin: 20px 10px 80px 10px;
+                padding: 22px;
+            }
+            .bottom-bar a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 18+ popup -->
+<div id="ageModal">
+    <div id="ageBox">
+        <h2>Vstup pouze pro osoby 18+</h2>
+        <p>Tento web obsahuje informace o elektronických cigaretách.</p>
+        <button onclick="enterSite()">Je mi 18 let</button>
+    </div>
+</div>
+
+<script>
+function enterSite() {
+    document.getElementById('ageModal').style.display = 'none';
+}
+</script>
+
+<header class="urban-header">
+    <div class="urban-title">VAPESHOP VAPESVĚT</div>
+    <div class="urban-underline"></div>
+</header>
+
+<div class="open-banner">Otevřeno dnes 8:00–18:00</div>
+
+<script>
+function checkOpeningHours() {
+    const now = new Date();
+    const day = now.getDay();
+    const hour = now.getHours();
+    const banner = document.querySelector(".open-banner");
+    const isWeekday = day >= 1 && day <= 5;
+    const isOpenTime = hour >= 8 && hour < 18;
+    banner.style.display = (isWeekday && isOpenTime) ? "block" : "none";
+}
+checkOpeningHours();
+</script>
+
+<div class="container">
+
+    <img src="IMG_1961.jpg" alt="Vchod do prodejny" class="photo-small">
+
+    <div class="notice">
+        <strong>Ukončení provozu e‑shopu:</strong><br>
+        Provoz internetového obchodu byl ukončen.<br>
+        Veškeré reklamace lze uplatnit osobně na adrese provozovny nebo prostřednictvím pošty.
+    </div>
+
+    <h2>Kontakt</h2>
+
+    <p><strong>E‑mail:</strong><br>
+        pm3@seznam.cz<br>
+        info@vapesvet.cz
+    </p>
+
+    <p><strong>Provozovatel:</strong><br>
+        Marian Pokorný<br>
+        IČ: 60533528<br>
+        DIČ: CZ7506273885<br>
+        Staropoštovní 96, 69123 Pohořelice<br>
+        <em>(nejde o prodejnu, pouze adresa podnikatele)</em>
+    </p>
+
+    <div class="highlight-box">
+        ✔ Prodejna se nachází v Ivančicích – nikoli v Pohořelicích
+    </div>
+
+    <h2>Adresa prodejny</h2>
+
+    <p>
+        Komenského nám. 79/12<br>
+        66491 Ivančice<br>
+        <em>Prodejna je v prvním patře a má společný vchod s Komerční bankou a prodejnou elektrokol.</em>
+    </p>
+
+    <div class="btn-box">
+        <a class="btn" href="https://maps.google.com/?q=Komenského+nám.+79/12+Ivančice" target="_blank">📍 Navigovat</a>
+        <a class="btn" href="tel:608100701">📞 Zavolat</a>
+        <a class="btn" href="mailto:pm3@seznam.cz">✉️ Napsat e‑mail</a>
+    </div>
+
+    <p><strong>Telefon:</strong><br>608 100 701</p>
+
+    <p><strong>Otevírací doba:</strong><br>
+        Pondělí až pátek 8:00–18:00<br>
+        Bez přestávky
+    </p>
+
+    <p class="warning">⚠️ PRODEJ POUZE OSOBÁM STARŠÍM 18 LET</p>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="container">
+    <h2>Co u nás najdete</h2>
+
+    <h3>E‑liquidy</h3>
+    <ul>
+        <li><strong>OXVA</strong> – čisté a výrazné chutě</li>
+        <li><strong>Aramax (Ritchy Group)</strong> – tabákové i ovocné příchutě</li>
+        <li><strong>Ritchy / Liqua</strong> – široká nabídka chutí</li>
+        <li><strong>Elfliq (Elfbar)</strong> – intenzivní příchutě</li>
+        <li><strong>Nasty Juice</strong> – prémiové ovocné mixy</li>
+        <li><strong>Just Juice</strong> – britské ovocné příchutě</li>
+    </ul>
+
+    <h3>Shake & Vape + Boostery</h3>
+    <p>Nabízíme Shake & Vape příchutě a nikotinové boostery.</p>
+
+    <h3>Cartridge a příslušenství</h3>
+
+    <h4>OXVA zařízení</h4>
+    <ul>
+        <li>Xlim V3</li>
+        <li>Xlim Pro</li>
+        <li>Xlim SQ</li>
+        <li>NexLIM</li>
+        <li>Oneo</li>
+        <li>VPrime</li>
+    </ul>
+
+    <h4>Cartridge OXVA – skladem</h4>
+    <ul>
+        <li>OXVA EZ</li>
+        <li>OXVA CRC</li>
+        <li>OXVA SS</li>
